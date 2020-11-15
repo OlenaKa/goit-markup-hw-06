@@ -578,6 +578,11 @@ footer .container {
   align-items: center;
 }
 
+footer .social-links {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
 .address-line:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -586,6 +591,8 @@ footer .container {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  display: inline-block;
+  font-style: normal;
 }
 
 .footer-address .link {
@@ -596,10 +603,12 @@ footer .container {
   margin-top: 20px;
   margin-bottom: 0;
 }
-address {
-  font-style: inherit;
-  line-height: 24px;
+
+.address-line {
+  display: inline-block;
+  text-decoration: none;
 }
+
 .contact {
   display: inline-block;
 }
@@ -621,6 +630,59 @@ address {
 footer .link-icon {
   background-color: rgba(255, 255, 255, 0.1);
   fill: #ffffff;
+}
+
+.subscribe {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 93px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+.subscribe button {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12 px;
+  padding: 10px 29px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+
+  color: #ffffff;
+  fill: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88px;
+  text-decoration: none;
+  background: var(--accent-color);
+}
+
+.subscribe input {
+  display: block;
+  background-color: var(--bg-secondary-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin-right: 12px;
+
+  width: 358px;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.subscribe-icon {
+  margin-left: 10px;
+  fill: #ffffff;
+}
+
+.subscribe-action {
+  display: inline-flex;
+  margin-top: 20px;
 }
 
 .backdrop {
@@ -658,7 +720,7 @@ footer .link-icon {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal button {
+.modal button.close {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -672,4 +734,9 @@ footer .link-icon {
 
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal button.close:hover,
+.modal button.close:focus {
+  fill: var(--accent-color);
 }

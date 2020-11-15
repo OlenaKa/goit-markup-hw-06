@@ -291,51 +291,53 @@
       </section>
       <section class="client-section">
         <!--Section Clients-->
-        <h2 class="section-title">Постоянные клиенты</h2>
-        <ul class="clients">
-          <li class="client">
-            <a class="client-link" href="">
-              <svg class="logo-client" width="44" height="50">
-                <use href="./images/newsprite.svg#logo-1"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="client">
-            <a class="client-link" href="">
-              <svg class="logo-client" width="40" height="52">
-                <use href="./images/newsprite.svg#logo-2"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="client">
-            <a class="client-link" href="">
-              <svg class="logo-client" width="41" height="43">
-                <use href="./images/newsprite.svg#logo-3"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="client">
-            <a class="client-link" href="">
-              <svg class="logo-client" width="80" height="42">
-                <use href="./images/newsprite.svg#logo-4"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="client">
-            <a class="client-link" href="">
-              <svg class="logo-client" width="59" height="47">
-                <use href="./images/newsprite.svg#logo-5"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="client">
-            <a class="client-link" href="">
-              <svg class="logo-client" width="88" height="45">
-                <use href="./images/newsprite.svg#logo-6"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="section-title">Постоянные клиенты</h2>
+          <ul class="clients">
+            <li class="client">
+              <a class="client-link" href="">
+                <svg class="logo-client" width="44" height="50">
+                  <use href="./images/newsprite.svg#logo-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="client">
+              <a class="client-link" href="">
+                <svg class="logo-client" width="40" height="52">
+                  <use href="./images/newsprite.svg#logo-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="client">
+              <a class="client-link" href="">
+                <svg class="logo-client" width="41" height="43">
+                  <use href="./images/newsprite.svg#logo-3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="client">
+              <a class="client-link" href="">
+                <svg class="logo-client" width="80" height="42">
+                  <use href="./images/newsprite.svg#logo-4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="client">
+              <a class="client-link" href="">
+                <svg class="logo-client" width="59" height="47">
+                  <use href="./images/newsprite.svg#logo-5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="client">
+              <a class="client-link" href="">
+                <svg class="logo-client" width="88" height="45">
+                  <use href="./images/newsprite.svg#logo-6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>
@@ -361,7 +363,7 @@
           </address>
         </div>
         <div class="joinus">
-          <p>присоединяйтесь</p>
+          <b>присоединяйтесь</b>
           <ul class="social-links">
             <li class="link">
               <a class="link-icon" href="">
@@ -393,22 +395,54 @@
             </li>
           </ul>
         </div>
+        <form action="subscribe" class="subscribe">
+          <b>Подпишитесь на рассылку</b>
+          <div class="subscribe-action">
+            <input type="email" name="mail" placeholder="E-mail" />
+            <button type="submit">
+              Подписаться
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/newsprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close>
+        <button class="close" type="button" data-modal-close>
           <svg width="18" height="18">
             <use href="./images/newsprite.svg#close-black"></use>
           </svg>
         </button>
+        <form class="js-order-form">
+          <label for="name">Имя</label>
+          <input type="text" name="" id="name" />
+
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" />
+
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail" />
+
+          <label for="comment">Комментарий</label>
+          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+
+          <input type="checkbox" name="agree" id="agree" />
+          <label for="agree"
+            >Соглашаюсь с рассылкой и принимаю Условия договора</label
+          >
+
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
     <script>
       ;(() => {
         document
-          .querySelector(".js-speaker-form")
+          .querySelector(".js-order-form")
           .addEventListener("submit", (e) => {
             e.preventDefault()
 
