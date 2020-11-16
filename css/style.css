@@ -183,14 +183,14 @@ footer .logostudio {
 .order-button {
   display: inline-block;
   text-align: center;
-  padding: 20px 32px;
+  padding: 10px 32px;
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 
   color: #ffffff;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88px;
+  line-height: 1.88;
   text-decoration: none;
   background: var(--accent-color);
 
@@ -657,7 +657,7 @@ footer .link-icon {
   fill: #ffffff;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88px;
+  line-height: 1.88;
   text-decoration: none;
   background: var(--accent-color);
 }
@@ -716,6 +716,7 @@ footer .link-icon {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  cursor: pointer;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -732,11 +733,150 @@ footer .link-icon {
   height: 30px;
   border-radius: 50%;
 
+  cursor: pointer;
+
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal button.close:hover,
 .modal button.close:focus {
   fill: var(--accent-color);
+}
+
+.order-form {
+  outline: solid 1px palevioletred;
+  width: 528px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  cursor: pointer;
+}
+.order-form-title {
+  outline: solid 1px palevioletred;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.order-form-field {
+  position: relative;
+  outline: solid 1px palevioletred;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: var(--primary-text-color);
+}
+
+.order-form-field .info-input {
+  position: relative;
+  margin-top: 4px;
+  padding: 14px 14px 14px 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-form-field .info-input:focus,
+.order-form-field .info-input:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.order-form-field .info-input:focus + .icon-order-form {
+  fill: var(--accent-color);
+}
+
+.order-form-field .info-input:hover + .icon-order-form {
+  fill: var(--accent-color);
+}
+.icon-order-form {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-form-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 10px 32px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-decoration: none;
+  background: var(--accent-color);
+}
+
+.comment-text {
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-text:focus,
+.comment-text:hover {
+  border: 1px solid var(--accent-color);
+}
+
+.box {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+
+.box:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/checkedbox.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 2px;
+  border: 0.2px solid var(--accent-color);
 }

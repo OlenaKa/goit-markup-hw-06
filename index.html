@@ -416,25 +416,52 @@
             <use href="./images/newsprite.svg#close-black"></use>
           </svg>
         </button>
-        <form class="js-order-form">
-          <label for="name">Имя</label>
-          <input type="text" name="" id="name" />
+        <form class="order-form js-order-form">
+          <h2 class="order-form-title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <label class="order-form-field">
+            <span>Имя</span>
+            <input class="info-input" type="text" name="" id="name" />
+            <svg class="icon-order-form" width="12" height="12">
+              <use href="./images/newsprite.svg#person-black"></use>
+            </svg>
+          </label>
 
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel" />
+          <label class="order-form-field">
+            <span>Телефон</span>
+            <input class="info-input" type="tel" name="tel" />
+            <svg class="icon-order-form" width="15" height="15">
+              <use href="./images/newsprite.svg#phone-black"></use>
+            </svg>
+          </label>
 
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail" />
+          <label class="order-form-field">
+            <span>Почта</span>
+            <input class="info-input" type="email" name="mail" />
+            <svg class="icon-order-form" width="15" height="15">
+              <use href="./images/newsprite.svg#email-black"></use>
+            </svg>
+          </label>
+          <label class="order-form-field">
+            Комментарий
+            <textarea
+              class="comment-text"
+              name="comment"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
 
-          <label for="comment">Комментарий</label>
-          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+          <label class="order-form-field checkbox">
+            <input class="box" type="checkbox" name="agree" value="agree" />
+            <span class="checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+          </label>
 
-          <input type="checkbox" name="agree" id="agree" />
-          <label for="agree"
-            >Соглашаюсь с рассылкой и принимаю Условия договора</label
-          >
-
-          <button type="submit">Отправить</button>
+          <button type="submit" class="order-form-submit">Отправить</button>
         </form>
       </div>
     </div>
