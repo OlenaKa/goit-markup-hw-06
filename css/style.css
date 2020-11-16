@@ -579,7 +579,7 @@ footer .container {
 }
 
 footer .social-links {
-  margin-top: 20px;
+  margin-top: 22px;
   margin-bottom: 0;
 }
 
@@ -746,7 +746,6 @@ footer .link-icon {
 }
 
 .order-form {
-  outline: solid 1px palevioletred;
   width: 528px;
   margin-left: auto;
   margin-right: auto;
@@ -754,7 +753,6 @@ footer .link-icon {
   cursor: pointer;
 }
 .order-form-title {
-  outline: solid 1px palevioletred;
   margin-top: 0;
   margin-bottom: 12px;
   color: var(--secondary-color);
@@ -769,7 +767,6 @@ footer .link-icon {
 
 .order-form-field {
   position: relative;
-  outline: solid 1px palevioletred;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -798,13 +795,11 @@ footer .link-icon {
   border: 1px solid var(--accent-color);
 }
 
-.order-form-field .info-input:focus + .icon-order-form {
-  fill: var(--accent-color);
-}
-
+.order-form-field .info-input:focus + .icon-order-form,
 .order-form-field .info-input:hover + .icon-order-form {
   fill: var(--accent-color);
 }
+
 .icon-order-form {
   position: absolute;
   bottom: 15px;
@@ -831,17 +826,19 @@ footer .link-icon {
 
 .comment-text {
   margin-top: 4px;
+  padding: 12px 16px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   cursor: pointer;
   color: var(--primary-text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment-text:focus,
@@ -849,6 +846,18 @@ footer .link-icon {
   border: 1px solid var(--accent-color);
 }
 
+.order-form-field.checkbox {
+  display: inline-flex;
+  flex-flow: row;
+  /* align-items: flex-start;
+  flex-wrap: wrap; */
+}
+
+.checkbox-link {
+  display: block;
+  margin-left: 5px;
+  color: var(--accent-color);
+}
 .box {
   width: 1px;
   height: 1px;
